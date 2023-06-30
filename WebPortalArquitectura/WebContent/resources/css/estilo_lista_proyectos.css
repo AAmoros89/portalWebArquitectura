@@ -1,0 +1,102 @@
+:root{
+	--azul: #134074;
+	--azulOscuro: #082545;
+	--azulGris: #8DA9C4;
+	--blanco: #fff;
+	--fuente: 'Quicksand', sans-serif;
+	
+}
+/*a todos los elementos respeten el valor definido de alto y de ancho definido en caja*/
+html{
+	/*box-sizing: border-box;*/
+}
+
+*,*::after, *::before{
+	/*box-sizing: inherit;*/
+}
+
+body{
+	font-family: var(--fuente);
+	background-color: var(--azulOscuro);
+	/*display: flex; esto hace que se ponga todo en el mismo formulario, no me deja poner un titulo */
+	/*align-items: center;*/
+	/*height: 100vh; /*Ocupa el 100% de la pantalla*/
+}
+
+h1{	
+	text-align: center;
+	color: var(--blanco);
+	margin-bottom: 20px;
+}
+
+#main-container{
+	margin:0px 20px;
+	width: 800px;
+}
+
+table{
+	background-color: var(--blanco);
+	text-align: left;
+	border-collapse:collapse; /*quitar los bordes de la tabla*/
+	width: 100%;
+}
+
+th, td {	
+	padding: 20px; /*espacio entre las filas y columnas*/
+}
+
+thead{
+	background-color: var(--azulGris);
+	border-bottom: solid 5px var(--azul);
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color:#ddd;
+}
+
+tr:hover td{
+	background-color:var(--azulGris);
+	color: white;
+}
+
+@media(min-width:768px){ /*para tablet*/
+	.imagen-formulario{
+		height: auto;
+		background-position: right;
+	}
+}
+
+@media(min-width:1200px){ /*para ordenador*/
+	.imagen-formulario{
+		background-position: center;
+	}
+}
+
+@media(min-width:768px){
+	.contenedor-formulario{
+		display: flex;
+	}	
+}
+
+.input input{
+	width: 100%;
+	padding: 10px 16px;
+	border-radius: 5px;
+	outline: none; /* para no poner el borde negro al hacer click sobre la caja de texto*/
+}
+
+.input input[type="submit"]{ /*para seleccionar el input de tipo submit, es decir el botón login*/
+	background-color: var(--azulGris);
+	color: var(--blanco);
+	font-size: 25px;
+	font-weight: bold;
+	border: none;
+	margin-top: 0px;
+	transition: background-color .3s ease-in-out; /*para que la transicion del cambio del color sea mas suave*/
+}
+
+.input input[type="submit"]:hover{
+	cursor: pointer; /*agregar la mano en el cursor cuando se pase sobre el botón*/
+	background-color: var(--azulOscuro);
+}

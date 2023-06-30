@@ -1,0 +1,9 @@
+#main-container{
+	margin:0px 550px;
+	width: 900px;
+}
+
+.input input[type="button"]{ /*para seleccionar el input de tipo submit, es decir el botón login*/
+	margin:0px 550px;
+	width: 910px;
+}

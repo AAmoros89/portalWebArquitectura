@@ -1,0 +1,8 @@
+.imagen-formulario{
+	background-image: url('../imagenes/menuArq.jpg');
+	background-position: center center;
+	background-size: cover; /*se adapta a su contenedor padre*/
+	height: 820px;
+	flex: 0 0 calc(60%);
+	position: relative; /* se pone la posicion como relativa para que el hijo ocupe toda esta posicion*/
+}

@@ -1,0 +1,14 @@
+.imagen-formulario{
+	background-image: url('../imagenes/arquitectura_certificado.jpg');
+	background-position: center center;
+	background-size: cover; /*se adapta a su contenedor padre*/	
+	flex: 0 0 calc(60%);
+	 /* se pone la posicion como relativa para que el hijo ocupe toda esta posicion*/
+}
+
+select{
+	width: 100%;
+	padding: 10px 16px;
+	border-radius: 5px;
+	outline: none; /* para no poner el borde negro al hacer click sobre la caja de texto*/
+}

@@ -1,0 +1,131 @@
+:root{
+	--azul: #134074;
+	--azulOscuro: #082545;
+	--azulGris: #8DA9C4;
+	--blanco: #fff;
+	--fuente: 'Quicksand', sans-serif;
+	
+}
+/*a todos los elementos respeten el valor definido de alto y de ancho definido en caja*/
+html{
+	box-sizing: border-box;
+}
+
+*,*::after, *::before{
+	box-sizing: inherit;
+}
+
+body{
+	font-family: var(--fuente);
+	background-color: var(--azulOscuro);
+	/*display: flex; esto hace que se ponga todo en el mismo formulario, no me deja poner un titulo */
+	align-items: center;
+	height: 100vh; /*Ocupa el 100% de la pantalla*/
+}
+h1{	
+	text-align: center;
+	color: var(--azulGris);
+	margin-bottom: 50px;
+}
+
+.contenedor{
+	margin: 0 auto;
+	max-width: 1200px;
+	width:95%;
+}
+
+.imagen-formulario{
+	background-image: url('../imagenes/arquitectura.jpg');
+	background-position: center center;
+	background-size: cover; /*se adapta a su contenedor padre*/
+	height: 200px;
+	flex: 0 0 calc(60%);
+	position: relative; /* se pone la posicion como relativa para que el hijo ocupe toda esta posicion*/
+}
+
+.imagen-formulario::before{ /* elemento*/
+	
+	content: '';
+	position: absolute; /* la posicion del gradiante del padre y no todo lo disponible de la pagina*/
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(to right, rgba(141,169,196,.5), rgba(19,64,116,.5));
+}
+
+.formulario{
+	padding: 50px;
+	background-color: var(--azul);
+}
+
+.texto-formulario h2, .input label, .texto-formulario p {
+	color: var(--blanco);
+}
+
+.texto-formulario h2{
+	font-size: 40px;
+	text-align: center;
+}
+
+.texto-formulario p{
+	font-size: 25px;
+	text-align: center;
+}
+
+.input label{
+	display: block;
+	color: var(--blanco);
+	font-size: 25px;
+	font-weight: bold; /*poner las label en negrita*/
+	margin-top: 20px;
+}
+
+.nuevo-registro a{
+    display: inline-block;
+    color: var(--blanco);
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.input input{
+	width: 100%;
+	padding: 10px 16px;
+	border-radius: 5px;
+	outline: none; /* para no poner el borde negro al hacer click sobre la caja de texto*/
+}
+
+.input input[type="submit"]{ /*para seleccionar el input de tipo submit, es decir el botón login*/
+	background-color: var(--azulGris);
+	color: var(--blanco);
+	font-size: 25px;
+	font-weight: bold;
+	border: none;
+	margin-top: 20px;
+	transition: background-color .3s ease-in-out; /*para que la transicion del cambio del color sea mas suave*/
+}
+
+.input input[type="submit"]:hover{
+	cursor: pointer; /*agregar la mano en el cursor cuando se pase sobre el botón*/
+	background-color: var(--azulOscuro);
+}
+
+@media(min-width:768px){ /*para tablet*/
+	.imagen-formulario{
+		height: auto;
+		background-position: right;
+	}
+}
+
+@media(min-width:1200px){ /*para ordenador*/
+	.imagen-formulario{
+		background-position: center;
+	}
+}
+
+@media(min-width:768px){
+	.contenedor-formulario{
+		display: flex;
+	}
+}
+

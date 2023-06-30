@@ -1,0 +1,15 @@
+<Context>
+
+	<Resource name="jdbc/Clientes" auth="Container" type="javax.sql.DataSource"
+	
+				maxActive="15" maxIdle="3"  maxWait="5000"
+				
+				driverClassName="org.hsqldb.jdbc.JDBCDriver"
+				
+				 url="jdbc:hsqldb:hsql://localhost/">
+				
+				
+				
+	</Resource>
+						
+</Context>

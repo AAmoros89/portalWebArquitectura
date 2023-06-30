@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Formulario Login</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="resources/css/normalize.css">
+	<link rel="stylesheet" href="resources/css/estilos.css"/> <!-- hay que especificar el link para usar el css -->
+	<link rel="stylesheet" href="resources/css/estilo_menuArq.css"/>
+</head>
+
+<body>
+	<h1>Aplicación de Gestión de Arquitectura</h1>
+	<div class= "contenedor-formulario contenedor">
+		<div class="imagen-formulario">
+				
+		</div>
+		
+		<form class="formulario" method="post" action="menuArq.jsp">
+			<div class="texto-formulario">
+				<h2>Bienvenido de nuevo</h2>
+				<p>Inicia sesión con tu cuenta </p>
+			</div>
+			<div class = "input">
+				<label for="usuario">Usuario</label>
+				<input placeholder ="Ingresa tu nombre" type ="text" name="usuario" required/>
+			</div>
+			
+			<div class = "input">
+				<label for="contraseña">Contraseña</label>
+				<input placeholder ="Ingresa tu contraseña" type ="password" name="contraseña" required/>
+			</div>
+			
+			<div class = "input">
+				<input type="submit" value="Login">			
+			</div>
+		</form>	
+	</div>
+</body>
+</html>

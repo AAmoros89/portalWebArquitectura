@@ -1,0 +1,11 @@
+#main-container{
+	margin:0px 0px;
+}
+
+.input input{
+	width: 109%;
+}
+
+.input input[type="submit"]{ /*para seleccionar el input de tipo submit, es decir el botón login*/
+	text-align: auto;
+}
